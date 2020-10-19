@@ -79,9 +79,9 @@ align-items:center;
     padding-right:10px;
     margin-left:10px;
     margin-right:10px;
-    line-height: 2.5;
+    line-height: 2;
     white-space: pre-line;
-    font-size:18px;
+    font-size:16px;
     ${media.desktopL`
     width: 33%;
     `}

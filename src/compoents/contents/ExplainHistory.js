@@ -32,18 +32,18 @@ flex-direction:column;
 justify-content:flex-start;
 // align-items:center;
 
-.bgAlpha{
-    position:absolute;
-    width:100%;
-    height:100%;
-    z-order:10;
-}
-.bgImg{
-  position:absolute;
-    width:100%;
-    height:100%;
-    z-order:5;
-}
+// .bgAlpha{
+//     position:absolute;
+//     width:100%;
+//     height:100%;
+//     z-order:10;
+// }
+// .bgImg{
+//   position:absolute;
+//     width:100%;
+//     height:100%;
+//     z-order:5;
+// }
 .contents{
     position:relative;
     color: white;   
@@ -51,7 +51,7 @@ justify-content:flex-start;
     padding-right:10px;
     margin-left:10px;
     margin-right:10px;
-    line-height: 3;
+    line-height: 2;
     font-size: 16px;
 }
 }
@@ -91,6 +91,7 @@ function ExplainHistory({imgPath,contents,audioHandle}){
     const dispatch = useDispatch()
     const audioState=()=>{
         setMuted(props=>!props);
+        muted ? audioHandle.pause(): audioHandle.play();
         audioHandle.muted = muted  
       }
       const {title,content} = contents;

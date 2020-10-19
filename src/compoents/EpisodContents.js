@@ -16,8 +16,9 @@ width:100%;
 `
 
 // let audioMuted = false;
-const audio = new Audio()
+
 function EpisodContent({ match }){
+  const audio = new Audio()
   const { id } = match.params;
   const eIndex = parseInt(id, 10);
   
@@ -79,7 +80,13 @@ function EpisodContent({ match }){
         disableScroll: false,
         continuous: false,
       callback: function (index, elem) {
-        audio.pause();
+        let audioPromise = audio.play();
+        if(audioPromise !== undefined){
+          audioPromise.then(_ =>{
+            audio.pause();
+          })
+        }
+        
         console.log('callback')
       },
       transitionEnd: function (index, elem) {
@@ -95,7 +102,13 @@ function EpisodContent({ match }){
           audio.play();
           audio.muted=true;
         }else{
-          audio.pause();
+          let audioPromise = audio.play();
+        if(audioPromise !== undefined){
+          audioPromise.then(_ =>{
+            audio.pause();
+          })
+        }
+          
         }
         
       }
@@ -113,8 +126,13 @@ function EpisodContent({ match }){
       
         audio.src = require(`../assets/music/${EpisodeOverView[eIndex].audio}.wav`)
       audio.load()
+      // let audioPromise = audio.play();
+      //   if(audioPromise !== undefined){
+      //     audioPromise.then(_ =>{
+      //     //  audio.play();
+      //     })
+      //   }
       
-      // audio.play();
       audio.muted = true;
       
       
