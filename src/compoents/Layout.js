@@ -1,10 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import { media } from "../lib/style-utils";
+import oc from 'open-color'
 
 const Wrapper = styled.div`
-position: relative;      
-background: #e9ecef;
+  position: relative;      
+// background: #e9ecef;
+  background:${oc.gray[0]};
     margin: 0 auto;
     display: flex;
   flex-direction: column;

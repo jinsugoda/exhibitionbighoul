@@ -20,7 +20,7 @@ function QRScan({history}){
             history.push('/contents')
         }
         dispatch(gIndex(0))
-            history.push('/entry')
+            history.push('/contents')
         console.log(data)
     }
     const errorHandler = (err)=>{

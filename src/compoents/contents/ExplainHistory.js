@@ -51,8 +51,8 @@ justify-content:flex-start;
     padding-right:10px;
     margin-left:10px;
     margin-right:10px;
-    line-height: 2;
-    z-order:100;
+    line-height: 3;
+    font-size: 16px;
 }
 }
 
@@ -110,18 +110,18 @@ return(
           
         </HeaderTitleW>
         <HeaderTitleW onClick={soicalShare}>
-          <img src={require('../../assets/imgs/share.png')} />
+          <img src={require('../../assets/imgs/share.png')} style={{width:30,height:30}} />
         </HeaderTitleW>    
     </Header>
     <ContentWrapper>
-        <img className='bgImg' src={require('../../assets/imgs/background.jpg')} />
-        <img className='bgAlpha' src={require('../../assets/imgs/alpha.png')} />
-            <h2 className='contents' style={{textAlign:'center'}}>
+        {/* <img className='bgImg' src={require('../../assets/imgs/background.jpg')} /> */}
+        {/* <img className='bgAlpha' src={require('../../assets/imgs/alpha.png')} /> */}
+            <h2 className='contents' style={{textAlign:'center',marginTop:'70px', fontSize:24}}>
                 {title}
             </h2>
-            <h4 className='contents' style={{textAlign:'center'}}>        
+            <p className='contents' style={{textAlign:'center'}}>        
                 {content}
-            </h4>
+            </p>
         
     </ContentWrapper>
     <FooterWrapper>

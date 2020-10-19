@@ -17,7 +17,7 @@ flex-direction:column;
 const Header = styled.div`
 position:relative;
 display:flex;
-flex:1;
+flex:2;
 width:100%;
 justify-content:space-between;
 `
@@ -27,18 +27,15 @@ position:relative;
 display:flex;
 flex:10;
 justify-content:center;
-align-items:flex-start;
+align-items:center;
 `
 const Footer = styled.div`
 position:relative;
 display:flex;
-flex;2;
+flex:4;
 justify-content:center;
 align-items:center;
-.bgImg{
-    width:200px;
-    height:60px;
-    position:absolute;
+
 `
 const HeaderTitleW = styled.div`
 position:relative;
@@ -69,17 +66,19 @@ function MakingVideo({history}){
         <Wrapper>
             <Header>
                 <HeaderTitleW >
-                    <AiOutlineLeft onClick={()=>history.go(-1)} />
+                    <AiOutlineLeft style={{color:oc.gray[7]}} onClick={()=>history.go(-1)} />
                 </HeaderTitleW>
-                <HeaderTitleW onClick={soicalShare}>
-                <img className='imgShare' src={require('../../assets/imgs/share.png')} />
+                <HeaderTitleW onClick={soicalShare} >
+                <img src={require('../../assets/imgs/entry_share.png')} />
                 </HeaderTitleW> 
             </Header>
             <VideoWrapper>
                 <ReactPlayer url={require('../../assets/video/background.mp4')} controls={true} light={require('../../assets/imgs/entry/video_light.jpg')} />
             </VideoWrapper>
             <Footer>
-                <img  className='bgImg' src={require('../../assets/imgs/my.jpg')} />
+                <div>
+                <img src={require('../../assets/imgs/footer_white.png')}/>
+                </div>
             </Footer>
         </Wrapper>
     )

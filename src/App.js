@@ -20,10 +20,10 @@ function App() {
       <Provider store={store}>
       <MainLayout>
         <Switch>
-          <Route path='/' exact component={MainScanScreen}/>
-          <Route path='/qrscane' component={QRScan}/>
-          <Route path='/contents' component={EpisodContent}/>
-          <Route path='/help' component='Help'/>
+          {/* <Route path='/' exact component={MainScanScreen}/> */}
+          {/* <Route path='/qrscane' component={QRScan}/> */}
+          <Route path='/contents/:id' component={EpisodContent}/>
+          {/* <Route path='/help' component='Help'/> */}
           <Route path='/entry' component={EntryFirst} />
           <Route path='/video' component={MakingVideo} />
           <Route path='/conclusion' component={Conclusion} />

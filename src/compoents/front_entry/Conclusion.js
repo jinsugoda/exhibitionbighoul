@@ -18,7 +18,7 @@ flex-direction:column;
 const Header = styled.div`
 position:relative;
 display:flex;
-flex:1;
+flex:5;
 justify-content:center;
 align-items:flex-start;
 
@@ -83,6 +83,13 @@ margin-right:15px;
 }
 
 `
+const FooterWrapper = styled.div`
+position:relative;
+display:flex;
+flex:1;
+justify-content:center;
+align-items:center;
+`
 
 export default function Conclusion({history}){
     const dispatch = useDispatch(); 
@@ -92,17 +99,25 @@ export default function Conclusion({history}){
     return(
         <Wrapper>
             <Header>
-                <img className='bgImg' src={require('../../assets/imgs/entry/modern_bg.jpg')} />
+              <div>
+                <img className='bgImg' src={require('../../assets/imgs/entry/modern_bg.png')} />
+              </div>
+                
                 <HeaderItemWrapper>
                 <HeaderTitleW >
                     <AiOutlineLeft onClick={()=>history.go(-1)} />
                 </HeaderTitleW>
                 <Title>한국근대문학관</Title>
                 <HeaderTitleW onClick={soicalShare}>
-                <img className='imgShare' src={require('../../assets/imgs/share.png')} />
+                <img className='imgShare' src={require('../../assets/imgs/entry_share.png')} />
                 </HeaderTitleW> 
                 </HeaderItemWrapper>
             </Header>
+            <FooterWrapper>
+            <div>
+                <img src={require('../../assets/imgs/footer_white.png')}/>
+                </div>
+            </FooterWrapper>
         </Wrapper>
     )
 }

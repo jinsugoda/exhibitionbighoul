@@ -134,11 +134,13 @@ function EntryFirst({history}){
                 <img className='bgImg' src={require('../../assets/imgs/entry/entry.png')} />
             </BGImg>
             <Content>
-                <VideoButton onClick={GoVideoHandle}>Go to show Video </VideoButton>
-                <ExbiButtun onClick={GoConculsion} >Moder Exhibition</ExbiButtun>
+                <VideoButton onClick={GoVideoHandle}>메이킹 영상</VideoButton>
+                <ExbiButtun onClick={GoConculsion} >한국근대문학관</ExbiButtun>
             </Content>
             <Footer >
-                <img  className='bgImg' src={require('../../assets/imgs/my.jpg')} />
+                <div>
+                <img src={require('../../assets/imgs/footer.png')}/>
+                </div>
             </Footer>
         </Wrapper>
     )

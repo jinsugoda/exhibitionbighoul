@@ -22,7 +22,7 @@ const Header = styled.div`
 position: relative;
 display: flex;
 flex: 1;
-justify-content:space-between;
+justify-content:flex-end;
 align-items:center;
 `
 const HeaderWrapper = styled.div`
@@ -70,16 +70,15 @@ position:relative;
 display:flex;
 flex:1;
 justify-content:center;
-align-items:baseline;
+align-items:center;
 `
 const HeaderTitleW = styled.div`
 position:relative;
 display:flex;
 justify-content:center;
 align-items:center;
-border-radious: 50%;
-font-size: 36px;
-color: white;
+
+
 margin-left: 15px;
 margin-right:15px;
 &:hover{
@@ -137,11 +136,11 @@ margin-right:15px;
         <Wrapper >
           <HeaderWrapper>
           <Header >
-                <HeaderTitleW>
+                {/* <HeaderTitleW>
                     <AiOutlineLeft />
-                </HeaderTitleW>
+                </HeaderTitleW> */}
                 <HeaderTitleW onClick={soicalShare}>
-                <img className='imgShare' src={require('../../assets/imgs/share.png')} />
+                <img className='imgShare' src={require('../../assets/imgs/share.png')} style={{width:30,height:30}}  />
                 </HeaderTitleW>    
             </Header>
             <HeaderEndReading>
@@ -158,16 +157,16 @@ margin-right:15px;
                 
                 <StringContent>처음으로 돌아가기</StringContent>
             </ContentItems>
-            <ContentItems>
+            {/* <ContentItems>
                 <ItemContent>
                   <AiOutlineCheckCircle color={oc.gray[6]} />
                 </ItemContent>
                 
                 <StringContent>종료하기</StringContent>
-            </ContentItems>
+            </ContentItems> */}
             </ContentWrapper>
             <FooterWrapper>
-              <img src={require('../../assets/imgs/audio_muted.jpg')}/>
+              <img src={require('../../assets/imgs/footer_white.png')}/>
             </FooterWrapper>
     </Wrapper>  
       )

@@ -1,9 +1,9 @@
 import React ,{useEffect, useRef} from 'react'
-import {useSelector} from 'react-redux'
+import {useSelector,useDispatch} from 'react-redux'
 import styled from 'styled-components'
 import ReactSwipe from "react-swipe";
 import {EpisodeOverView,EpisodeContents,ImgPath} from '../lib/data'
-
+import {gIndex} from '../reducer/varient'
 import ExplainHistory from './contents/ExplainHistory'
 import BranchHistory from './contents/BranchHistory'
 import EndHistory from './contents/EndHistory'
@@ -17,11 +17,15 @@ width:100%;
 
 // let audioMuted = false;
 const audio = new Audio()
-function EpisodContent(){
+function EpisodContent({ match }){
+  const { id } = match.params;
+  const eIndex = parseInt(id, 10);
   
+  const dispatch = useDispatch();
+  dispatch(gIndex(id))
     const reactSwipe = useRef();
     // Scaned Episode Index
-    const eIndex = useSelector(state=>state.selectIndex.indexValue);
+    // const eIndex = useSelector(state=>state.selectIndex.indexValue);
     // const muted = useSelector(state=>state.selectIndex.audio);
     // const dispatch = useDispatch()
     const startSlide = 0;

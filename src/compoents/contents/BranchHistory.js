@@ -1,7 +1,9 @@
 import React ,{ useState} from 'react'
+import {useDispatch} from 'react-redux'
 import styled from 'styled-components'
 import oc from 'open-color'
 import {media} from '../../lib/style-utils'
+import {modalShow} from '../../reducer/varient'
 
 const Wrapper = styled.div`
 position: relative;
@@ -31,21 +33,24 @@ justify-content:space-between;
 }
 
 `
+
 const Share = styled.div`
 position:relative;
 display:flex;
 justify-content:flex-end;
 align-items:flex-end;
 border-radius:50%;
-margin-right: 10px;
-font-size:48px;
-z-order:100;
+
+margin-right:10px;
+margin-top:10px;
+
 `
 const Audio = styled.div`
 position:relative;
 display:flex;
 justify-content:center;
 align-items:center;
+
 &:active{
     background:${oc.gray[3]}
 }
@@ -74,7 +79,7 @@ align-items:center;
     padding-right:10px;
     margin-left:10px;
     margin-right:10px;
-    line-height: 2;
+    line-height: 2.5;
     white-space: pre-line;
     font-size:18px;
     ${media.desktopL`
@@ -97,7 +102,7 @@ position:relative;
 display:flex;
 flex:1;
 justify-content:center;
-align-items:baseline;
+align-items:center;
 `
 
 
@@ -107,12 +112,16 @@ align-items:baseline;
 
 function BranchHistory({contents,imgPath,index,length,audioHandle}){
     const [muted, setMuted] = useState(false)
-    
+    const dispatch = useDispatch()
+    const soicalShare = () =>{
+        dispatch(modalShow(true))
+      }
     const audioState=()=>{
         setMuted(props=>!props);
         audioHandle.muted = muted;
         
-      }    
+      } 
+       
      const paneProgress =  Array.apply(null, Array(length)).map((_, i) => {
         
         return (
@@ -129,13 +138,13 @@ function BranchHistory({contents,imgPath,index,length,audioHandle}){
                 <img className="bgImg" src={require(`../../assets/imgs/${imgPath}.jpg`)} />
             
             
-                <Share>
-                    <img src={require('../../assets/imgs/share.png')} />
+                <Share onClick={soicalShare}>
+                    <img src={require('../../assets/imgs/share.png')} style={{width:30,height:30}} />
                 </Share>
             
             <div className="share" onClick={audioState}>
                 <Audio >
-                    <img src={require(`../../assets/imgs/audio_${muted ? "un":""}muted.jpg`)} />
+                    <img src={require(`../../assets/imgs/audio_${muted ? "un":""}muted.jpg`)} style={{width:80,height:80}} />
                     
                 </Audio>
             </div>
