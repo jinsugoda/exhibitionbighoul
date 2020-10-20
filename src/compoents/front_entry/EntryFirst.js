@@ -22,16 +22,16 @@ margin-top:35px;
 justify-content:center;
 align-items:center;
 .bgImg{
-    // width:100%;
-    ${media.desktopL`
-    width: 33%;
-    `}
-    ${media.mobilePhone`
-    width:94%;
-    `}
-    ${media.tablet`
-    width: 55%;
-    `}
+    width:96%;
+    // ${media.desktopL`
+    // width: 33%;
+    // `}
+    // ${media.mobilePhone`
+    // width:94%;
+    // `}
+    // ${media.tablet`
+    // width: 55%;
+    // `}
     height:90%;
     position:absolute;
     
@@ -134,7 +134,7 @@ function EntryFirst({history}){
         <Wrapper>
             <BGImg >
                
-                    <img className='bgImg' src={require('../../assets/imgs/entry/entry1.png')}  />
+                    <img className='bgImg' src={require('../../assets/imgs/entry/entry.png')}  />
                
             </BGImg>
             <Content>
