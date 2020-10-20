@@ -162,7 +162,7 @@ function BranchHistory({contents,imgPath,index,length,audioHandle}){
         </ContentWrapper>
         <FooterWrapper>
             <div>
-            <img src={require('../../assets/imgs/footer_white.png')}/>
+            <img src={require('../../assets/imgs/footer_white1.png')}/>
             </div>
           
         </FooterWrapper>

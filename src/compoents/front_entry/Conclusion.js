@@ -115,7 +115,7 @@ export default function Conclusion({history}){
             </Header>
             <FooterWrapper>
             <div>
-                <img src={require('../../assets/imgs/footer_white.png')}/>
+                <img src={require('../../assets/imgs/footer_white1.png')}/>
                 </div>
             </FooterWrapper>
         </Wrapper>

@@ -77,7 +77,7 @@ function MakingVideo({history}){
             </VideoWrapper>
             <Footer>
                 <div>
-                <img src={require('../../assets/imgs/footer_white.png')}/>
+                <img src={require('../../assets/imgs/footer_white1.png')}/>
                 </div>
             </Footer>
         </Wrapper>

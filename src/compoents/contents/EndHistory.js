@@ -166,7 +166,7 @@ margin-right:15px;
             </ContentItems> */}
             </ContentWrapper>
             <FooterWrapper>
-              <img src={require('../../assets/imgs/footer_white.png')}/>
+              <img src={require('../../assets/imgs/footer_white1.png')}/>
             </FooterWrapper>
     </Wrapper>  
       )

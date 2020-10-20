@@ -117,7 +117,7 @@ return(
     <ContentWrapper>
         {/* <img className='bgImg' src={require('../../assets/imgs/background.jpg')} /> */}
         {/* <img className='bgAlpha' src={require('../../assets/imgs/alpha.png')} /> */}
-            <h2 className='contents' style={{textAlign:'center',marginTop:'70px', fontSize:24}}>
+            <h2 className='contents' style={{textAlign:'center',marginTop:'40px', fontSize:24}}>
                 {title}
             </h2>
             <p className='contents' style={{textAlign:'center'}}>        
@@ -127,7 +127,7 @@ return(
     </ContentWrapper>
     <FooterWrapper>
       <div>
-      <img src={require('../../assets/imgs/footer.png')}/>
+      <img src={require('../../assets/imgs/footer1.png')}/>
       </div>
         
     </FooterWrapper>

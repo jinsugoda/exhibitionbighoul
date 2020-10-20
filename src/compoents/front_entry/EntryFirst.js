@@ -139,7 +139,7 @@ function EntryFirst({history}){
             </Content>
             <Footer >
                 <div>
-                <img src={require('../../assets/imgs/footer.png')}/>
+                <img src={require('../../assets/imgs/footer1.png')}/>
                 </div>
             </Footer>
         </Wrapper>
