@@ -43,7 +43,7 @@ position:relative;
 display:flex;
 justify-content:space-between;
 align-items:center;
-margin-top:10px;
+margin-top:5px;
 ${media.desktopL`
 width: 33.33%;
 `}
@@ -62,6 +62,7 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 font-size:32;
+margin-left:20px;
 color:white;
 
 `
@@ -75,6 +76,7 @@ font-size: 36px;
 color: white;
 margin-left: 15px;
 margin-right:15px;
+
 &:hover{
   color: ${oc.gray[2]}
 }
@@ -82,6 +84,10 @@ margin-right:15px;
   color:${oc.gray[5]}
 }
 
+.imgShare{
+  width: 60px;
+  height:60px;
+}
 `
 const FooterWrapper = styled.div`
 position:relative;
