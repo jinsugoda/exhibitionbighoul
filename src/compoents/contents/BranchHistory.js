@@ -148,7 +148,7 @@ function BranchHistory({contents,imgPath,index,length,audioHandle}){
             
             <div className="share" onClick={audioState}>
                 <Audio >
-                    <img src={require(`../../assets/imgs/${muted ? "un":""}bmuted.jpg`)} style={{width:80,height:80}} />
+                    <img src={require(`../../assets/imgs/${muted ? "un":""}bmuted.${muted?"gif":"jpg"}`)} style={{width:80,height:80}} />
                     
                 </Audio>
             </div>

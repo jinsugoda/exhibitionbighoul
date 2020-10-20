@@ -117,7 +117,7 @@ return(
         
         <HeaderTitleW onClick={audioState}>
           
-            {muted? <img  src={require('../../assets/imgs/muted_ex.png')} /> : <img src={require('../../assets/imgs/muted_ex.png')} />}
+            {muted? <img  src={require('../../assets/imgs/unmuted_ex.png')} /> : <img src={require('../../assets/imgs/muted_ex.png')} />}
           
           
           
