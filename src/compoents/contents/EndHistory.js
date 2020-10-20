@@ -85,8 +85,7 @@ justify-content:center;
 align-items:center;
 
 
-margin-left: 15px;
-margin-right:15px;
+
 &:hover{
   color: ${oc.gray[2]}
 }
@@ -146,7 +145,7 @@ margin-right:15px;
                     <AiOutlineLeft />
                 </HeaderTitleW> */}
                 <HeaderTitleW onClick={soicalShare}>
-                <img className='imgShare' src={require('../../assets/imgs/share_black.png')} style={{width:30,height:30}}  />
+                <img className='imgShare' src={require('../../assets/imgs/share_black.png')} style={{width:80,height:80}}  />
                 </HeaderTitleW>    
             </Header>
             <HeaderEndReading>

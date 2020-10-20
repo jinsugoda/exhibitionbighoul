@@ -95,6 +95,12 @@ display:flex;
 flex:1;
 justify-content:center;
 align-items:center;
+.footerImg{
+
+  display:flex;
+  justify-content:center;
+
+}
 `
 
 export default function Conclusion({history}){
@@ -120,8 +126,8 @@ export default function Conclusion({history}){
                 </HeaderItemWrapper>
             </Header>
             <FooterWrapper>
-            <div>
-                <img src={require('../../assets/imgs/footer_black.png')}/>
+            <div className='footerImg'>
+                <img src={require('../../assets/imgs/footer_black.png')} style={{width:'30%',height:'50%'}}/>
                 </div>
             </FooterWrapper>
         </Wrapper>

@@ -32,10 +32,15 @@ align-items:center;
 const Footer = styled.div`
 position:relative;
 display:flex;
-flex:4;
+flex:2;
 justify-content:center;
 align-items:center;
+.footerImg{
 
+    display:flex;
+    justify-content:center;
+  
+  }
 `
 const HeaderTitleW = styled.div`
 position:relative;
@@ -69,15 +74,15 @@ function MakingVideo({history}){
                     <AiOutlineLeft style={{color:oc.gray[7]}} onClick={()=>history.go(-1)} />
                 </HeaderTitleW>
                 <HeaderTitleW onClick={soicalShare} >
-                <img src={require('../../assets/imgs/share_black.png')} />
+                <img src={require('../../assets/imgs/share_black.png')} style={{width:80,height:80}} />
                 </HeaderTitleW> 
             </Header>
             <VideoWrapper>
                 <ReactPlayer url={require('../../assets/video/background.mp4')} controls={true} light={require('../../assets/imgs/entry/video_light.jpg')} />
             </VideoWrapper>
             <Footer>
-                <div>
-                <img src={require('../../assets/imgs/footer_black.png')}/>
+                <div className='footerImg'>
+                <img src={require('../../assets/imgs/footer_black.png')} style={{width:'30%',height:'50%'}}/>
                 </div>
             </Footer>
         </Wrapper>

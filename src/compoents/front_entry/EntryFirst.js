@@ -18,7 +18,7 @@ display: flex;
 flex:4;
 height:100%;
 width:100%;
-margin-top:50px;
+margin-top:35px;
 justify-content:center;
 align-items:center;
 .bgImg{
@@ -27,12 +27,12 @@ align-items:center;
     width: 33%;
     `}
     ${media.mobilePhone`
-    width:92%;
+    width:94%;
     `}
     ${media.tablet`
-    width: 60%;
+    width: 55%;
     `}
-    height:100%;
+    height:90%;
     position:absolute;
     
 }
@@ -116,10 +116,12 @@ flex:1;
 
 justify-content:center;
 align-items:center;
-.bgImg{
-    width:200px;
-    height:60px;
-    position:absolute;
+.footerImg{
+
+    display:flex;
+    justify-content:center;
+  
+  }
 `
 function EntryFirst({history}){
     const GoVideoHandle=()=>{
@@ -131,15 +133,17 @@ function EntryFirst({history}){
     return(
         <Wrapper>
             <BGImg >
-                <img className='bgImg' src={require('../../assets/imgs/entry/entry.png')} />
+               
+                    <img className='bgImg' src={require('../../assets/imgs/entry/entry.png')}  />
+               
             </BGImg>
             <Content>
                 <VideoButton onClick={GoVideoHandle}>메이킹 영상</VideoButton>
                 <ExbiButtun onClick={GoConculsion} >한국근대문학관</ExbiButtun>
             </Content>
             <Footer >
-                <div>
-                <img src={require('../../assets/imgs/footer_white.png')}/>
+                <div className='footerImg'>
+                <img src={require('../../assets/imgs/footer_white.png')} style={{width:'30%',height:'50%'}}/>
                 </div>
             </Footer>
         </Wrapper>

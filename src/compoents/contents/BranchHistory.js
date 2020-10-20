@@ -39,11 +39,6 @@ position:relative;
 display:flex;
 justify-content:flex-end;
 align-items:flex-end;
-border-radius:50%;
-
-margin-right:10px;
-margin-top:10px;
-
 `
 const Audio = styled.div`
 position:relative;
@@ -148,7 +143,7 @@ function BranchHistory({contents,imgPath,index,length,audioHandle}){
             
             
                 <Share onClick={soicalShare}>
-                    <img src={require('../../assets/imgs/share_black.png')} style={{width:30,height:30}} />
+                    <img src={require('../../assets/imgs/share_black.png')} style={{width:80,height:80}} />
                 </Share>
             
             <div className="share" onClick={audioState}>
