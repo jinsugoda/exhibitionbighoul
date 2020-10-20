@@ -60,7 +60,7 @@ position:relative;
 display:flex;
 justify-content:center;
 align-items:center;
-margin-bottom:10px;
+margin-bottom:5px;
 .imgpro{
     margin:3px;
 }
@@ -99,10 +99,11 @@ align-items:center;
 `
 const FooterWrapper = styled.div`
 position:relative;
-display:flex;
-flex:1;
+margin: 0 auto;
 justify-content:center;
 align-items:center;
+margin-top: 20px;
+margin-bottom: 25px;
 `
 
 
@@ -135,7 +136,9 @@ function BranchHistory({contents,imgPath,index,length,audioHandle}){
         
         <Header >
             
-                <img className="bgImg" src={require(`../../assets/imgs/${imgPath}.jpg`)} />
+            <img className="bgImg" src={require(`../../assets/imgs/${imgPath}.jpg`)} />
+            
+                
             
             
                 <Share onClick={soicalShare}>
