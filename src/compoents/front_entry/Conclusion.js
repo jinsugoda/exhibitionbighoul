@@ -115,13 +115,13 @@ export default function Conclusion({history}){
                 </HeaderTitleW>
                 <Title>한국근대문학관</Title>
                 <HeaderTitleW onClick={soicalShare}>
-                <img className='imgShare' src={require('../../assets/imgs/entry_share.png')} />
+                <img className='imgShare' src={require('../../assets/imgs/share_black.png')} alt="loading..." />
                 </HeaderTitleW> 
                 </HeaderItemWrapper>
             </Header>
             <FooterWrapper>
             <div>
-                <img src={require('../../assets/imgs/footer_white1.png')}/>
+                <img src={require('../../assets/imgs/footer_black.png')}/>
                 </div>
             </FooterWrapper>
         </Wrapper>

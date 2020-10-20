@@ -104,6 +104,12 @@ justify-content:center;
 align-items:center;
 margin-top: 20px;
 margin-bottom: 25px;
+.footerImg{
+
+    display:flex;
+    justify-content:center;
+  
+  }
 `
 
 
@@ -142,12 +148,12 @@ function BranchHistory({contents,imgPath,index,length,audioHandle}){
             
             
                 <Share onClick={soicalShare}>
-                    <img src={require('../../assets/imgs/share.png')} style={{width:30,height:30}} />
+                    <img src={require('../../assets/imgs/share_black.png')} style={{width:30,height:30}} />
                 </Share>
             
             <div className="share" onClick={audioState}>
                 <Audio >
-                    <img src={require(`../../assets/imgs/audio_${muted ? "un":""}muted.jpg`)} style={{width:80,height:80}} />
+                    <img src={require(`../../assets/imgs/${muted ? "un":""}bmuted.jpg`)} style={{width:80,height:80}} />
                     
                 </Audio>
             </div>
@@ -164,8 +170,8 @@ function BranchHistory({contents,imgPath,index,length,audioHandle}){
             
         </ContentWrapper>
         <FooterWrapper>
-            <div>
-            <img src={require('../../assets/imgs/footer_white1.png')}/>
+            <div className='footerImg'>
+            <img src={require('../../assets/imgs/footer_black.png')} style={{width:'30%',height:'50%'}}/>
             </div>
           
         </FooterWrapper>

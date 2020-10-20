@@ -63,6 +63,12 @@ display:flex;
 flex:1;
 justify-content:center;
 align-items:center;
+.footerImg{
+
+  display:flex;
+  justify-content:center;
+
+}
 
 `
 const HeaderTitleW = styled.div`
@@ -70,17 +76,20 @@ position:relative;
 display:flex;
 justify-content:center;
 align-items:center;
-border-radious: 50%;
-font-size: 36px;
-color: white;
-margin-left: 15px;
-margin-right:15px;
-margin-top:25px;
+
+
+margin-left: 5px;
+margin-right:5px;
+margin-top:5px;
 &:hover{
   color: ${oc.gray[2]}
 }
 &:active{
   color:${oc.gray[5]}
+}
+img{
+  width:90px;
+  height:90px;
 }
 `
 
@@ -107,17 +116,19 @@ return(
     <Header >
         
         <HeaderTitleW onClick={audioState}>
-          {muted? <RiVolumeUpFill/> : <RiVolumeMuteFill />}
+          
+            {muted? <img  src={require('../../assets/imgs/muted_ex.png')} /> : <img src={require('../../assets/imgs/muted_ex.png')} />}
+          
+          
           
         </HeaderTitleW>
-        <HeaderTitleW onClick={soicalShare}>
-          <img src={require('../../assets/imgs/share.png')} style={{width:30,height:30}} />
+        <HeaderTitleW onClick={soicalShare} style={{padding:'15px'}}>
+          <img src={require('../../assets/imgs/share_white.png')} style={{width:'40px',height:'40px'}} />
         </HeaderTitleW>    
     </Header>
     <ContentWrapper>
-        {/* <img className='bgImg' src={require('../../assets/imgs/background.jpg')} /> */}
-        {/* <img className='bgAlpha' src={require('../../assets/imgs/alpha.png')} /> */}
-            <h2 className='contents' style={{textAlign:'center',marginTop:'40px', fontSize:24}}>
+        
+            <h2 className='contents' style={{textAlign:'center',marginTop:'35px', fontSize:24}}>
                 {title}
             </h2>
             <p className='contents' style={{textAlign:'center'}}>        
@@ -126,8 +137,8 @@ return(
         
     </ContentWrapper>
     <FooterWrapper>
-      <div>
-      <img src={require('../../assets/imgs/footer1.png')}/>
+      <div className='footerImg'>
+      <img src={require('../../assets/imgs/footer_white.png')} style={{width:'30%',height:'50%'}}/>
       </div>
         
     </FooterWrapper>

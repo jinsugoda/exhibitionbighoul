@@ -25,11 +25,11 @@ ${media.tablet`
 width: 768;
 `}
 ${media.mobileTablet`
-margin-top: 1rem;
+// margin-top: 1rem;
 width: calc(100%-2rem);
 `}
 ${media.mobilePhone`
-margin-top: 0.5rem;
+// margin-top: 0.5rem;
 width: calc(100%-1rem);
 `}
 `;

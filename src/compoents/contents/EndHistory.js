@@ -71,6 +71,12 @@ display:flex;
 flex:1;
 justify-content:center;
 align-items:center;
+.footerImg{
+
+  display:flex;
+  justify-content:center;
+
+}
 `
 const HeaderTitleW = styled.div`
 position:relative;
@@ -95,7 +101,7 @@ display:flex;
 justify-content:center;
 align-items:center;
 color:${oc.gray[7]};
-font-size: 24px;
+font-size: 20px;
 
 margin-left: 15px;
 margin-right:15px;
@@ -140,11 +146,11 @@ margin-right:15px;
                     <AiOutlineLeft />
                 </HeaderTitleW> */}
                 <HeaderTitleW onClick={soicalShare}>
-                <img className='imgShare' src={require('../../assets/imgs/share.png')} style={{width:30,height:30}}  />
+                <img className='imgShare' src={require('../../assets/imgs/share_black.png')} style={{width:30,height:30}}  />
                 </HeaderTitleW>    
             </Header>
             <HeaderEndReading>
-              페지를 모두 읽었습니다.
+              페이지를 모두 읽었습니다.
             </HeaderEndReading>
           </HeaderWrapper>
             
@@ -166,7 +172,10 @@ margin-right:15px;
             </ContentItems> */}
             </ContentWrapper>
             <FooterWrapper>
-              <img src={require('../../assets/imgs/footer_white1.png')}/>
+              <div className='footerImg'>
+                <img src={require('../../assets/imgs/footer_black.png')} style={{width:'30%',height:'50%'}}/>
+              </div>
+              
             </FooterWrapper>
     </Wrapper>  
       )

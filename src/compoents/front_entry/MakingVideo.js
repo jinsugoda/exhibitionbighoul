@@ -69,7 +69,7 @@ function MakingVideo({history}){
                     <AiOutlineLeft style={{color:oc.gray[7]}} onClick={()=>history.go(-1)} />
                 </HeaderTitleW>
                 <HeaderTitleW onClick={soicalShare} >
-                <img src={require('../../assets/imgs/entry_share.png')} />
+                <img src={require('../../assets/imgs/share_black.png')} />
                 </HeaderTitleW> 
             </Header>
             <VideoWrapper>
@@ -77,7 +77,7 @@ function MakingVideo({history}){
             </VideoWrapper>
             <Footer>
                 <div>
-                <img src={require('../../assets/imgs/footer_white1.png')}/>
+                <img src={require('../../assets/imgs/footer_black.png')}/>
                 </div>
             </Footer>
         </Wrapper>
