@@ -74,6 +74,7 @@ display:flex;
 flex:1;
 justify-content:center;
 align-items:center;
+margin-bottom: 20px;
 .footerImg{
 
   display:flex;
@@ -130,13 +131,14 @@ const ContentFontApply = styled.p`
     text-align:left;
 `
 
-function ExplainHistory({imgPath,contents,audioHandle}){
+function ExplainHistory({imgPath,contents,audioHandle,audioStateArr}){
     const [muted, setMuted] = useState(false)
     const dispatch = useDispatch()
     const audioState=()=>{
         setMuted(props=>!props);
         !muted ? audioHandle.pause(): audioHandle.play();
         
+        audioStateArr[0] = !muted;
       }
       const {title,content,author} = contents;
     const soicalShare = () =>{
@@ -171,7 +173,7 @@ return(
             </h2>
               <h3 className='title' style={{textAlign:'left', fontSize:24,marginTop:0}}>{author}</h3>
             <ContentFontApply >        
-                {content}
+                {content}                
             </ContentFontApply>
         
     </ContentWrapper>

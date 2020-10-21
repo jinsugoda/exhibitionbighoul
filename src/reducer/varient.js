@@ -25,7 +25,7 @@ export default function selectIndex(state = initState, action){
     case SELECT_INDEX:
       return {...state, indexValue: action.index};
      
-      case AUDIO_SETTING:
+      case AUDIO_SETTING:        
         return {...state, audio: action.value}
      
       case SOCIAL_SHOW:

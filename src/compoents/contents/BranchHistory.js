@@ -83,6 +83,7 @@ width:100%;
 justify-content:center;
 align-items:center;
 margin-bottom:5px;
+z-index:100;
 .imgpro{
     margin:3px;
 }
@@ -95,6 +96,7 @@ flex-direction:column;
 justify-content:flex-start;
 align-items:center;
 overflow:auto;
+z-index:-1;
 .contents{
     position:relative;
     color: ${oc.gray[8]};   
@@ -160,11 +162,11 @@ flex-direction:column;
     width:100%;
     height:100%;
     position:relative;
-    z-order:0;
+    z-index:0;
 }
 `
 
-function BranchHistory({contents,imgPath,index,length,audioHandle}){
+function BranchHistory({contents,imgPath,index,length,audioHandle,audioStateArr}){
     const [muted, setMuted] = useState(false)
     const dispatch = useDispatch()
     const soicalShare = () =>{
@@ -173,7 +175,8 @@ function BranchHistory({contents,imgPath,index,length,audioHandle}){
     const audioState=()=>{
         setMuted(props=>!props);
         !muted ? audioHandle.pause(): audioHandle.play();
-        
+        console.log(muted);
+        audioStateArr[index] = !muted;
         
       } 
        
@@ -223,19 +226,7 @@ function BranchHistory({contents,imgPath,index,length,audioHandle}){
         <ContentWrapper>
                 
                 <pre className='contents' style={{textAlign:'left',fontFamily:'KBIZWINDOW'}}>
-                    {contents}
-                    Develop and maintain long-term relationships with key contacts (e.g. deans, directors, professors, student and alumni representatives) to enhance Twitter’s presence at target universities or organizations
-• Develop and implement an engagement plan and recruiting strategies with assigned university institutions
-• Connect with students and school leadership on the Twitter platform
-• Maintain a constant and steady focus on recent Twitter activity and upcoming major events to highlight on campus
-• Coach and prepare Tweeps involved in outreach initiatives (e.g. select and confirm speakers and interviewers, review presentations)
-• Manage campus events onsite (e.g. information sessions, tech talks, interviews)
-• Maintain relationships and execute events with key external diversity organizations and groups on campus to cultivate a strong partnership and enhance the Twitter brand in the employment marketplace
-• Develop internal and external communication strategies and tools to increase awareness and attract top talent
-• Develop recommendations for improvement and drive new initiatives
-• Track, analyze, and report on metrics and effectiveness of our programs. Analyze new trends and share creative ideas
-• Track and own an ever-evolving budget for your respective universities
-• Communicate fearlessly to build trust; you will bring a strong perspective that inspires change and motivates to develop simple solutions to complex problems
+                    {contents}                   
                 </pre>
             
         </ContentWrapper>
