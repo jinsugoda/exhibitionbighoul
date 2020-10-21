@@ -13,26 +13,28 @@ display: flex;
 height:100%;
 flex-direction: column;
 `
-const Header = styled.div`
+const HeaderWrapper = styled.div`
 position: relative;
 display: flex;
 flex: 3;
-// flex-direction:column;
+
+`
+const Header = styled.div`
+position: fixed;
+display: flex;
+flex: 3;
+flex-direction:column;
 justify-content:space-between;
 align-items:flex-start;
-
+width:100%;
+height:40%;
 
 .share{
     display:flex;
     justify-content:flex-end;
     z-order:100;
 }
-.bgImg{
-    width:100%;
-    height:100%;
-    position:absolute;
-    z-order:0;
-}
+
 
 `
 const HeaderTitleW = styled.div`
@@ -77,6 +79,7 @@ align-items:center;
 const ProgressTag = styled.div`
 position:relative;
 display:flex;
+width:100%;
 justify-content:center;
 align-items:center;
 margin-bottom:5px;
@@ -91,6 +94,7 @@ flex: 3;
 flex-direction:column;
 justify-content:flex-start;
 align-items:center;
+overflow:auto;
 .contents{
     position:relative;
     color: ${oc.gray[8]};   
@@ -141,7 +145,24 @@ margin-right:5px;
 `
 
 
-  
+const HeaderItemWrapper = styled.div`
+  position:relative;
+  display:flex;
+  justify-content:space-between;
+  width:100%;
+
+`
+const HeaderBackgroudWrapper = styled.div`
+position:absolute;
+display:flex;
+flex-direction:column;
+.bgImg{
+    width:100%;
+    height:100%;
+    position:relative;
+    z-order:0;
+}
+`
 
 function BranchHistory({contents,imgPath,index,length,audioHandle}){
     const [muted, setMuted] = useState(false)
@@ -166,36 +187,55 @@ function BranchHistory({contents,imgPath,index,length,audioHandle}){
       });
     return(
         <Wrapper >
-        
+        <HeaderWrapper>
         <Header >
-            
+            <HeaderBackgroudWrapper>
             <img className="bgImg" src={require(`../../assets/imgs/${imgPath}.jpg`)} alt="InsertImg" />
-            
-                
-            
-            <HeaderTitleW onClick={audioState}>
-               
-                {!muted? <img className="pause" src={require('../../assets/imgs/audio_pause.gif')} alt="unmuted" /> : <img className="pause" src={require('../../assets/imgs/audio_play1.png')} alt="muted"/>}
-                    
-               
-            </HeaderTitleW>
-                <HeaderTitleW onClick={soicalShare}>
-                    <HeaderArmBlack>
-                        <img src={require('../../assets/imgs/amplack.png')} style={{width:'35px',height:'35px'}} alt="shareButton" />
-                    </HeaderArmBlack>
-                    
-                </HeaderTitleW>
-            
-            
-        </Header>
-        <ContentWrapper>
-                <ProgressTag>
+            <ProgressTag>
                     {
                         paneProgress
                     }
-                </ProgressTag>
+         </ProgressTag>
+            </HeaderBackgroudWrapper>
+            
+                
+            <HeaderItemWrapper >
+            <HeaderTitleW onClick={audioState}>
+               
+               {!muted? <img className="pause" src={require('../../assets/imgs/audio_pause.gif')} alt="unmuted" /> : <img className="pause" src={require('../../assets/imgs/audio_play1.png')} alt="muted"/>}
+                   
+              
+           </HeaderTitleW>
+               <HeaderTitleW onClick={soicalShare}>
+                   <HeaderArmBlack>
+                       <img src={require('../../assets/imgs/amplack.png')} style={{width:'35px',height:'35px'}} alt="shareButton" />
+                   </HeaderArmBlack>
+                   
+               </HeaderTitleW>
+           
+            </HeaderItemWrapper>
+            
+              
+        </Header>
+        
+        </HeaderWrapper>
+       
+        <ContentWrapper>
+                
                 <pre className='contents' style={{textAlign:'left',fontFamily:'KBIZWINDOW'}}>
                     {contents}
+                    Develop and maintain long-term relationships with key contacts (e.g. deans, directors, professors, student and alumni representatives) to enhance Twitter’s presence at target universities or organizations
+• Develop and implement an engagement plan and recruiting strategies with assigned university institutions
+• Connect with students and school leadership on the Twitter platform
+• Maintain a constant and steady focus on recent Twitter activity and upcoming major events to highlight on campus
+• Coach and prepare Tweeps involved in outreach initiatives (e.g. select and confirm speakers and interviewers, review presentations)
+• Manage campus events onsite (e.g. information sessions, tech talks, interviews)
+• Maintain relationships and execute events with key external diversity organizations and groups on campus to cultivate a strong partnership and enhance the Twitter brand in the employment marketplace
+• Develop internal and external communication strategies and tools to increase awareness and attract top talent
+• Develop recommendations for improvement and drive new initiatives
+• Track, analyze, and report on metrics and effectiveness of our programs. Analyze new trends and share creative ideas
+• Track and own an ever-evolving budget for your respective universities
+• Communicate fearlessly to build trust; you will bring a strong perspective that inspires change and motivates to develop simple solutions to complex problems
                 </pre>
             
         </ContentWrapper>

@@ -14,7 +14,8 @@ flex:1;
 height:100%;
 width:100%;
 flex-direction: column;
-background:${oc.blue[6]}
+background:${oc.blue[6]};
+overflow:auto;
 `
 const Header = styled.div`
 position: relative;
