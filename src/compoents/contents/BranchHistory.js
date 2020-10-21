@@ -83,7 +83,6 @@ width:100%;
 justify-content:center;
 align-items:center;
 margin-bottom:5px;
-z-index:100;
 .imgpro{
     margin:3px;
 }
@@ -96,7 +95,6 @@ flex-direction:column;
 justify-content:flex-start;
 align-items:center;
 overflow:auto;
-z-index:-1;
 .contents{
     position:relative;
     color: ${oc.gray[8]};   
@@ -162,7 +160,7 @@ flex-direction:column;
     width:100%;
     height:100%;
     position:relative;
-    z-index:0;
+    z-order:0;
 }
 `
 
@@ -175,8 +173,6 @@ function BranchHistory({contents,imgPath,index,length,audioHandle,audioStateArr}
     const audioState=()=>{
         setMuted(props=>!props);
         !muted ? audioHandle.pause(): audioHandle.play();
-        console.log(muted);
-        console.log(index)
         audioStateArr[index] = !muted;
         
       } 

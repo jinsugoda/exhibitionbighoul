@@ -32,7 +32,7 @@ display: flex;
 flex: 4;
 flex-direction:column;
 justify-content:flex-start;
-overflow: auto;
+// overflow: auto;
 // align-items:center;
 
 // .bgAlpha{
