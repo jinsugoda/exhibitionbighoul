@@ -26,7 +26,7 @@ function EpisodContent({ match }){
   const { id } = match.params;
   const eIndex = parseInt(id, 10);
   const len = ImgPath[eIndex].length+1;
-  var AudioState = new Array(len).fill(false);
+  const AudioState = new Array(len).fill(false);
   const dispatch = useDispatch();
   dispatch(gIndex(id))
     const reactSwipe = useRef();
@@ -58,7 +58,7 @@ function EpisodContent({ match }){
         return <EndHistory slide={reactSwipe} contents={EpisodeOverView[eIndex]}/>
       }else{
         
-        return <BranchHistory  audioHandle={audio} imgPath={ImgPath[eIndex][index-1]} contents={EpisodeContents[eIndex][index-1]} index length = {ImgPath[eIndex].length} audioStateArr={AudioState}/>
+        return <BranchHistory  audioHandle={audio} imgPath={ImgPath[eIndex][index-1]} contents={EpisodeContents[eIndex][index-1]} index= {index} length = {ImgPath[eIndex].length} audioStateArr={AudioState}/>
       }
       
     }
@@ -98,19 +98,20 @@ function EpisodContent({ match }){
       transitionEnd: function (index, elem) {
         
         if(index === 0 ){
-          
-          if(AudioState[0] !== true){
-            
-            audio.src = require(`../assets/music/${EpisodeOverView[eIndex].audio}.wav`);
+          audio.src = require(`../assets/music/${EpisodeOverView[eIndex].audio}.wav`);
             audio.load()
+          if(AudioState[0] === true){
+            
+            audio.pause();
           }
           
           
         }else if(index > 0 && index <= EpisodeContents[eIndex].length){
-          
-          if(AudioState[index] !== true){
-            audio.src = require(`../assets/music/${ImgPath[eIndex][index-1]}.wav`)
+          console.log(index);
+          audio.src = require(`../assets/music/${ImgPath[eIndex][index-1]}.wav`)
           audio.load()
+          if(AudioState[index] === true){
+            audio.pause()
           }
           
           

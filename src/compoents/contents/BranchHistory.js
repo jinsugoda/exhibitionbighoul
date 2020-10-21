@@ -176,6 +176,7 @@ function BranchHistory({contents,imgPath,index,length,audioHandle,audioStateArr}
         setMuted(props=>!props);
         !muted ? audioHandle.pause(): audioHandle.play();
         console.log(muted);
+        console.log(index)
         audioStateArr[index] = !muted;
         
       } 
