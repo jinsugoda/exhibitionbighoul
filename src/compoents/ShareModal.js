@@ -13,7 +13,9 @@ const customStyles = {
       right                 : 'auto',
       bottom                : 'auto',
       marginRight           : '-50%',
-      transform             : 'translate(-50%, -50%)'
+      transform             : 'translate(-50%, -50%)',
+      width:'300px',
+      height: '150px'
     }
   };
   Modal.setAppElement('#root')
@@ -40,14 +42,15 @@ const customStyles = {
   const HeaderTitle = styled.div`
   position:relative;
   display:flex; 
-  font-size:18px;
+  font-size:24px;
   font-weight:bold;
   color:${oc.gray[8]}
+  margin-right:20px;
   `
   const Content = styled.div`
   position:relative;
   display:flex;
-  flex:1;
+  flex:3;
   justify-content:space-around;
   align-items:center;
   
@@ -105,19 +108,20 @@ function ShareModal({history}){
           >
             <Wrapper>
                 <Header>
-                    <HeaderTitle >Sharing</HeaderTitle>
-                    <AiOutlineClose color={oc.gray[8]} size={30} onClick={closeModal}/>
+                    <HeaderTitle >한국근대문학관 SNS</HeaderTitle>
+                    <AiOutlineClose color={oc.gray[5]} size={30} onClick={closeModal}/>
                 </Header>
 
                 <Content>
                     <SocialItem onClick={youtubeShare}>
-                        <img src={require('../assets/imgs/youtub_icon.png')} />
+                        <img src={require('../assets/imgs/youtub_icon.png')} alt="youtubeBtn"/>
                     </SocialItem>
                     <SocialItem onClick={facebookShare}>
-                        <img src={require('../assets/imgs/face_icon.png')} />    
+                        <img src={require('../assets/imgs/face_icon.png')} alt="fbBtn"/>    
                     </SocialItem>
+                    
                     <SocialItem onClick={instaShare}>
-                        <img src={require('../assets/imgs/insta_icon.png')} />    
+                        <img src={require('../assets/imgs/insta_icon.png')} alt="instalBtn"/>    
                     </SocialItem>
                 </Content>
             </Wrapper>

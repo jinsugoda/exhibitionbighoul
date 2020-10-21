@@ -4,8 +4,8 @@ import { Provider } from "react-redux";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import MainLayout from './compoents/Layout'
 import rootReducer from './reducer/rootReducer'
-import MainScanScreen from './compoents/MainScanScreen'
-import QRScan from './compoents/QRScan'
+// import MainScanScreen from './compoents/MainScanScreen'
+// import QRScan from './compoents/QRScan'
 import EpisodContent from './compoents/EpisodContents'
 import ShareModal from './compoents/ShareModal'
 import EntryFirst from './compoents/front_entry/EntryFirst'

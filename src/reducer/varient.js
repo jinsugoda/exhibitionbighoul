@@ -16,7 +16,7 @@ export const modalShow = (value)=>({
 
 const initState = {
   indexValue: 0,
-  audio:true,
+  audio:false,
   modal:false
 };
 

@@ -102,6 +102,15 @@ align-items:center;
 
 }
 `
+const HeaderArmBlack = styled.div`
+position:relative;
+display:flex;
+justify-content:center;
+align-items:center;
+border-radius:50%;
+border:2px solid ${oc.gray[2]};
+padding:5px;
+`
 
 export default function Conclusion({history}){
     const dispatch = useDispatch(); 
@@ -112,7 +121,7 @@ export default function Conclusion({history}){
         <Wrapper>
             <Header>
               <div>
-                <img className='bgImg' src={require('../../assets/imgs/entry/modern_bg.png')} />
+                <img className='bgImg' src={require('../../assets/imgs/entry/modern_bg.png')} alt="bgImg" />
               </div>
                 
                 <HeaderItemWrapper>
@@ -121,13 +130,15 @@ export default function Conclusion({history}){
                 </HeaderTitleW>
                 <Title>한국근대문학관</Title>
                 <HeaderTitleW onClick={soicalShare}>
-                <img className='imgShare' src={require('../../assets/imgs/share_black.png')} alt="loading..." />
+                <HeaderArmBlack>
+                        <img src={require('../../assets/imgs/amplack.png')} style={{width:'40px',height:'40px'}} alt="shareButton" />
+                    </HeaderArmBlack>
                 </HeaderTitleW> 
                 </HeaderItemWrapper>
             </Header>
             <FooterWrapper>
             <div className='footerImg'>
-                <img src={require('../../assets/imgs/footer_black.png')} style={{width:'30%',height:'50%'}}/>
+                <img src={require('../../assets/imgs/footer_black.png')} style={{width:'30%',height:'50%'}} alt="footerImg"/>
                 </div>
             </FooterWrapper>
         </Wrapper>

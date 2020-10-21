@@ -42,6 +42,15 @@ align-items:center;
   
   }
 `
+const HeaderArmBlack = styled.div`
+position:relative;
+display:flex;
+justify-content:center;
+align-items:center;
+border-radius:50%;
+border:2px solid ${oc.gray[2]};
+padding:5px;
+`
 const HeaderTitleW = styled.div`
 position:relative;
 display:flex;
@@ -74,7 +83,9 @@ function MakingVideo({history}){
                     <AiOutlineLeft style={{color:oc.gray[7]}} onClick={()=>history.go(-1)} />
                 </HeaderTitleW>
                 <HeaderTitleW onClick={soicalShare} >
-                <img src={require('../../assets/imgs/share_black.png')} style={{width:80,height:80}} />
+                <HeaderArmBlack>
+                        <img src={require('../../assets/imgs/amplack.png')} style={{width:'40px',height:'40px'}} alt="shareButton" />
+                    </HeaderArmBlack>
                 </HeaderTitleW> 
             </Header>
             <VideoWrapper>
@@ -82,7 +93,7 @@ function MakingVideo({history}){
             </VideoWrapper>
             <Footer>
                 <div className='footerImg'>
-                <img src={require('../../assets/imgs/footer_black.png')} style={{width:'30%',height:'50%'}}/>
+                <img src={require('../../assets/imgs/footer_black.png')} style={{width:'30%',height:'50%'}} alt="footerImage"/>
                 </div>
             </Footer>
         </Wrapper>

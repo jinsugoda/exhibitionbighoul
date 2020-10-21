@@ -1,9 +1,10 @@
-import React ,{useState,useEffect} from 'react'
+import React ,{useState} from 'react'
 import {useDispatch} from 'react-redux'
 import styled from 'styled-components'
 import oc from 'open-color'
+import '../../css/meyongjo.css'
 
-import {RiVolumeMuteFill,RiVolumeUpFill} from 'react-icons/ri'
+// import {RiVolumeMuteFill,RiVolumeUpFill} from 'react-icons/ri'
 import {modalShow} from '../../reducer/varient'
 
 const Wrapper = styled.div`
@@ -52,7 +53,16 @@ justify-content:flex-start;
     margin-left:10px;
     margin-right:10px;
     line-height: 2;
-    font-size: 16px;
+    font-size: 18px;
+}
+.title{
+  position:relative;
+    color: white;   
+    
+    margin-left:50px;
+    
+    
+    
 }
 }
 
@@ -87,23 +97,47 @@ margin-top:5px;
 &:active{
   color:${oc.gray[5]}
 }
-img{
-  width:90px;
-  height:90px;
+.pause{
+  width:50px;
+  height:50px;
+  
 }
 `
 
+const HeaderArmBlack = styled.div`
+position:relative;
+display:flex;
+justify-content:center;
+align-items:center;
+border-radius:50%;
+border:3px solid ${oc.gray[3]};
+padding:5px;
+background:white;
+margin-right:5px;
+`
+const ContentFontApply = styled.p`
 
+    font-family:'KBIZWINDOW';
+    position:relative;
+    color: white;   
+    padding-left:10px;
+    padding-right:10px;
+    margin-left:10px;
+    margin-right:10px;
+    line-height: 2;
+    font-size: 20px;
+    text-align:left;
+`
 
 function ExplainHistory({imgPath,contents,audioHandle}){
     const [muted, setMuted] = useState(false)
     const dispatch = useDispatch()
     const audioState=()=>{
         setMuted(props=>!props);
-        muted ? audioHandle.pause(): audioHandle.play();
-        audioHandle.muted = muted  
+        !muted ? audioHandle.pause(): audioHandle.play();
+        
       }
-      const {title,content} = contents;
+      const {title,content,author} = contents;
     const soicalShare = () =>{
       dispatch(modalShow(true))
     }
@@ -115,30 +149,34 @@ return(
         
     <Header >
         
-        <HeaderTitleW onClick={audioState}>
+        <HeaderTitleW onClick={audioState} style={{padding:'15px'}}>
           
-            {muted? <img  src={require('../../assets/imgs/unmuted_ex.png')} /> : <img src={require('../../assets/imgs/muted_ex.png')} />}
+            {!muted? <img className="pause" src={require('../../assets/imgs/audio_pause.gif')} alt="unmuted" /> : <img className="pause" src={require('../../assets/imgs/audio_play1.png')} alt="muted"/>}
           
-          
+            
           
         </HeaderTitleW>
         <HeaderTitleW onClick={soicalShare} style={{padding:'15px'}}>
-          <img src={require('../../assets/imgs/share_white.png')} style={{width:'40px',height:'40px'}} />
+        <HeaderArmBlack>
+        <img src={require('../../assets/imgs/amplack.png')} style={{width:'35px',height:'35px'}} alt="shareButton" />
+        </HeaderArmBlack>
+          
         </HeaderTitleW>    
     </Header>
     <ContentWrapper>
         
-            <h2 className='contents' style={{textAlign:'center',marginTop:'35px', fontSize:24}}>
+            <h2 className='title' style={{textAlign:'left',marginTop:'35px', fontSize:36,marginBottom:15}}>
                 {title}
             </h2>
-            <p className='contents' style={{textAlign:'center'}}>        
+              <h3 className='title' style={{textAlign:'left', fontSize:24,marginTop:0}}>{author}</h3>
+            <ContentFontApply >        
                 {content}
-            </p>
+            </ContentFontApply>
         
     </ContentWrapper>
     <FooterWrapper>
       <div className='footerImg'>
-      <img src={require('../../assets/imgs/footer_white.png')} style={{width:'30%',height:'50%'}}/>
+      <img src={require('../../assets/imgs/footer_white.png')} style={{width:'30%',height:'50%'}} alt="footImg" />
       </div>
         
     </FooterWrapper>

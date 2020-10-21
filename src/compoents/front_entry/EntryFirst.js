@@ -123,6 +123,8 @@ align-items:center;
   
   }
 `
+
+
 function EntryFirst({history}){
     const GoVideoHandle=()=>{
         history.push('/video');
@@ -134,7 +136,7 @@ function EntryFirst({history}){
         <Wrapper>
             <BGImg >
                
-                    <img className='bgImg' src={require('../../assets/imgs/entry/entry.png')}  />
+                    <img className='bgImg' src={require('../../assets/imgs/entry/entry2.png')} alt="bgImg" />
                
             </BGImg>
             <Content>
@@ -143,7 +145,7 @@ function EntryFirst({history}){
             </Content>
             <Footer >
                 <div className='footerImg'>
-                <img src={require('../../assets/imgs/footer_white.png')} style={{width:'30%',height:'50%'}}/>
+                <img src={require('../../assets/imgs/footer_white.png')} style={{width:'30%',height:'50%'}} alt="footerImg" />
                 </div>
             </Footer>
         </Wrapper>
