@@ -135,7 +135,7 @@ function EntryFirst({history}){
         <Wrapper>
             <BGImg >
                
-                    <img className='bgImg' src={require('../../assets/imgs/entry/entry2.png')} alt="bgImg" />
+                    <img className='bgImg' src={require('../../assets/imgs/entry/entry3.png')} alt="bgImg" />
                
             </BGImg>
             <Content>
