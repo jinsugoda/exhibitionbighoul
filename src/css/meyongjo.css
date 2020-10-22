@@ -6,3 +6,7 @@
   font-family: "KBIZWINDOW";
   src: url(../fonts/KBIZWINDOW.ttf) format("truetype");
 }
+@font-face {
+  font-family: "NotoSans";
+  src: url("../fonts/NotoSansCJKkr-Thin.otf") format("opentype");
+}

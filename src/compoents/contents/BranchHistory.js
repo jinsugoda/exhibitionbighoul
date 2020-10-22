@@ -114,8 +114,20 @@ overflow:auto;
     ${media.tablet`
     width: 60%;
     `}
+  
 }
-
+.help{
+  position:relative;
+  color: ${oc.gray[8]};   
+  padding-left:10px;
+  padding-right:10px;
+  margin-left:10px;
+  margin-right:10px;
+  line-height: 1.8;
+  white-space: pre-line;
+  font-size:15px;
+  
+}
 `
 const FooterWrapper = styled.div`
 position:relative;
@@ -170,6 +182,7 @@ function BranchHistory({contents,imgPath,index,length,audioHandle,audioStateArr}
     const soicalShare = () =>{
         dispatch(modalShow(true))
       }
+      const {main,help} = contents;
     const audioState=()=>{
         setMuted(props=>!props);
         !muted ? audioHandle.pause(): audioHandle.play();
@@ -195,7 +208,7 @@ function BranchHistory({contents,imgPath,index,length,audioHandle,audioStateArr}
                     {
                         paneProgress
                     }
-         </ProgressTag>
+            </ProgressTag>
             </HeaderBackgroudWrapper>
             
                 
@@ -223,8 +236,10 @@ function BranchHistory({contents,imgPath,index,length,audioHandle,audioStateArr}
         <ContentWrapper>
                 
                 <pre className='contents' style={{textAlign:'left',fontFamily:'KBIZWINDOW'}}>
-                    {contents}    
-                    
+                    {main} 
+                </pre>
+                <pre className='help' style={{textAlign:'left'}}>
+                  {help}
                 </pre>
             
         </ContentWrapper>

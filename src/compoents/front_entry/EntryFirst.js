@@ -22,16 +22,8 @@ justify-content:center;
 align-items:center;
 .bgImg{
     width:96%;
-    // ${media.desktopL`
-    // width: 33%;
-    // `}
-    // ${media.mobilePhone`
-    // width:94%;
-    // `}
-    // ${media.tablet`
-    // width: 55%;
-    // `}
-    height:90%;
+    
+    height:100%;
     position:absolute;
     
 }
@@ -135,7 +127,7 @@ function EntryFirst({history}){
         <Wrapper>
             <BGImg >
                
-                    <img className='bgImg' src={require('../../assets/imgs/entry/entry3.png')} alt="bgImg" />
+                    <img className='bgImg' src={require('../../assets/imgs/entry/entry5.png')} alt="bgImg" />
                
             </BGImg>
             <Content>

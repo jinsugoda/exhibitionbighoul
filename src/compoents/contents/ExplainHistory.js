@@ -20,7 +20,7 @@ overflow:auto;
 const Header = styled.div`
 position: relative;
 display: flex;
-flex: 1;
+// flex: 1;
 justify-content:space-between;
 align-items:flex-start;
 
@@ -29,10 +29,10 @@ align-items:flex-start;
 const ContentWrapper = styled.div`
 position:relative;
 display: flex;
-flex: 4;
+flex: 1;
 flex-direction:column;
 justify-content:flex-start;
-// overflow: auto;
+overflow: auto;
 // align-items:center;
 
 // .bgAlpha{
@@ -72,10 +72,10 @@ justify-content:flex-start;
 const FooterWrapper = styled.div`
 position:relative;
 display:flex;
-flex:1;
+// flex:1;
 justify-content:center;
 align-items:center;
-margin-bottom: 20px;
+margin-bottom: 30px;
 .footerImg{
 
   display:flex;
@@ -142,7 +142,9 @@ justify-content:flex-end;
 const CardItems = styled.div`
 position: relative;
 display:flex;
+justify-content:flex-end;
 align-items:center;
+margin-top:10px;
 margin-right:10px;
 .title{
   color:white;
@@ -206,16 +208,16 @@ return(
             <ContentFontApply >        
                 {content}                
             </ContentFontApply>
-        
-    </ContentWrapper>
-    <CardArrowWrapper>
-      <CardItems onClick={()=>swipeHandler.current.next()}>
+            <CardItems onClick={()=>swipeHandler.current.next()}>
         <p className="title">카드뉴스 감상하기</p>
         <Card>
           <AiOutlineRightCircle />
         </Card>
       </CardItems>
-    </CardArrowWrapper>
+    </ContentWrapper>
+    {/* <CardArrowWrapper>
+      
+    </CardArrowWrapper> */}
     <FooterWrapper>
       <div className='footerImg'>
       <img src={require('../../assets/imgs/footer_white.png')} style={{width:'30%',height:'50%'}} alt="footImg" />

@@ -3,7 +3,7 @@ import {useDispatch} from 'react-redux'
 import styled from 'styled-components'
 import ReactSwipe from "react-swipe";
 import {EpisodeOverView,EpisodeContents,ImgPath} from '../lib/data'
-import {gIndex,audioSetting} from '../reducer/varient'
+import {gIndex} from '../reducer/varient'
 import ExplainHistory from './contents/ExplainHistory'
 import BranchHistory from './contents/BranchHistory'
 import EndHistory from './contents/EndHistory'
