@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import oc from 'open-color'
 import '../../css/meyongjo.css'
 
-// import {RiVolumeMuteFill,RiVolumeUpFill} from 'react-icons/ri'
+import {AiOutlineRightCircle} from 'react-icons/ai'
 import {modalShow} from '../../reducer/varient'
 
 const Wrapper = styled.div`
@@ -131,8 +131,38 @@ const ContentFontApply = styled.p`
     font-size: 20px;
     text-align:left;
 `
+const CardArrowWrapper = styled.div`
+position: relative;
+display:flex;
+flex:1;
+width:100%;
+justify-content:flex-end;
 
-function ExplainHistory({imgPath,contents,audioHandle,audioStateArr}){
+`
+const CardItems = styled.div`
+position: relative;
+display:flex;
+align-items:center;
+margin-right:10px;
+.title{
+  color:white;
+  font-size:24px;
+}
+
+`
+const Card = styled.div`
+position: relative;
+display:flex;
+margin-left:10px;
+justify-content:flex-end;
+font-size:48px;
+border-radius:50%;
+border:0px solid ${oc.gray[0]};
+color:${oc.gray[5]};
+background:white;
+
+`
+function ExplainHistory({imgPath,contents,audioHandle,swipeHandler,audioStateArr}){
     const [muted, setMuted] = useState(false)
     const dispatch = useDispatch()
     const audioState=()=>{
@@ -178,6 +208,14 @@ return(
             </ContentFontApply>
         
     </ContentWrapper>
+    <CardArrowWrapper>
+      <CardItems onClick={()=>swipeHandler.current.next()}>
+        <p className="title">카드뉴스 감상하기</p>
+        <Card>
+          <AiOutlineRightCircle />
+        </Card>
+      </CardItems>
+    </CardArrowWrapper>
     <FooterWrapper>
       <div className='footerImg'>
       <img src={require('../../assets/imgs/footer_white.png')} style={{width:'30%',height:'50%'}} alt="footImg" />

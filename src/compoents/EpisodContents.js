@@ -49,11 +49,11 @@ function EpisodContent({ match }){
 
     // Scaned Episode branch content's counter [includin Explain page and End page] ,because +2
     const numberOfSlides = EpisodeContents[eIndex].length +2;
-
+    
     // Explain Page, Branch Pages, End Page
     const arrayItems = (index)=>{
       if(index === 0){
-        return <ExplainHistory imgPath={ImgPath[eIndex][index]} contents={EpisodeOverView[eIndex]} audioHandle={audio} audioStateArr={AudioState} />
+        return <ExplainHistory imgPath={ImgPath[eIndex][index]} contents={EpisodeOverView[eIndex]} swipeHandler={reactSwipe} audioHandle={audio} audioStateArr={AudioState} />
       }else if(index === numberOfSlides -1 ){        
         return <EndHistory slide={reactSwipe} contents={EpisodeOverView[eIndex]}/>
       }else{
@@ -85,14 +85,8 @@ function EpisodContent({ match }){
         disableScroll: false,
         continuous: false,
       callback: function (index, elem) {
-        let audioPromise = audio.play();
-        if(audioPromise !== undefined){
-          audioPromise.then(_ =>{
-            audio.pause();
-            
-          })
-        }
         
+            audio.pause();
         
       },
       transitionEnd: function (index, elem) {
@@ -131,9 +125,9 @@ function EpisodContent({ match }){
     
     
     
-    // const next=()=>{
-    //     reactSwipe.current.next();
-    // }
+  //   const next=()=>{
+  //     reactSwipe.current.next();
+  // }
     // const prev = ()=>{
     //     reactSwipe.current.prev();
     // }
