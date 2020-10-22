@@ -17,7 +17,7 @@ position: relative;
 display: flex;
 flex:4;
 height:100%;
-width:100%;
+width:80%;
 margin-top:35px;
 justify-content:center;
 align-items:center;

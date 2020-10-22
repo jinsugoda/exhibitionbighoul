@@ -181,7 +181,7 @@ function BranchHistory({contents,imgPath,index,length,audioHandle,audioStateArr}
         
         return (
           <div key={i} className="imgpro">            
-              <img src={require(`../../assets/imgs/progress_${i !== index ? 'un': ''}check.png`)} alt="SwapeComponent"/>            
+              <img src={require(`../../assets/imgs/progress_${i !== index-1 ? 'un': ''}check.png`)} alt="SwapeComponent"/>            
           </div>
         );
       });
@@ -223,7 +223,8 @@ function BranchHistory({contents,imgPath,index,length,audioHandle,audioStateArr}
         <ContentWrapper>
                 
                 <pre className='contents' style={{textAlign:'left',fontFamily:'KBIZWINDOW'}}>
-                    {contents}                   
+                    {contents}    
+                    
                 </pre>
             
         </ContentWrapper>
