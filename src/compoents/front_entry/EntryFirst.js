@@ -21,9 +21,9 @@ margin: 0 auto;
 margin-top:20px;
 justify-content:center;
 align-items:center;
-width:348px;
+
 .bgImg{
-    width:100%;
+    width:83%;
     height:100%;
     position:absolute;
 }
