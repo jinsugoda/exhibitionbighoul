@@ -11,17 +11,19 @@ height:100%;
 width:100%;
 flex-direction: column;
 background:${oc.blue[6]};
+
 `
 const BGImg = styled.div`
 position: relative;
 display: flex;
 flex:4;
-
+margin: 0 auto;
 margin-top:20px;
 justify-content:center;
 align-items:center;
+width:375px;
 .bgImg{
-    width:375px;
+    width:100%;
     height:100%;
     position:absolute;
 }

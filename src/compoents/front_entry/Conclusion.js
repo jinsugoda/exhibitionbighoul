@@ -25,8 +25,8 @@ align-items:flex-start;
 width:375px;
 .bgImg{
   
-
-    // width:100%;
+    
+    width:100%;
     // ${media.desktopL`
     // width: 33%;
     // `}
