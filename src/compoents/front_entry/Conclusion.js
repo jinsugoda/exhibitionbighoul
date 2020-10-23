@@ -22,7 +22,7 @@ flex:5;
 margin: 0 auto;
 justify-content:center;
 align-items:flex-start;
-width:85%
+width:90%;
 .bgImg{
   
     
