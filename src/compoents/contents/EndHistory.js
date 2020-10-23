@@ -199,7 +199,7 @@ margin-right:5px;
                   <AiOutlineCheckCircle color={oc.gray[6]} />
                 </ItemContent>
                 
-                <StringContent>종료하기</StringContent>
+                <StringContent onClick={window.onbeforeunload = ()=>{return ''}}>종료하기</StringContent>
             </ContentItems>
             </ContentWrapper>
             <FooterWrapper>

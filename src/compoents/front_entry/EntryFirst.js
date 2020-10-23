@@ -17,15 +17,13 @@ position: relative;
 display: flex;
 flex:4;
 
-margin-top:35px;
+margin-top:20px;
 justify-content:center;
 align-items:center;
 .bgImg{
-    width:96%;
-    
+    width:86%;
     height:100%;
     position:absolute;
-    
 }
 `
 const Content = styled.div`
@@ -103,10 +101,12 @@ ${media.desktopL`
 const Footer =styled.div`
 position: relative;
 display: flex;
-flex:1;
+
 
 justify-content:center;
 align-items:center;
+margin-top: 20px;
+margin-bottom:20px;
 .footerImg{
 
     display:flex;
@@ -127,7 +127,7 @@ function EntryFirst({history}){
         <Wrapper>
             <BGImg >
                
-                    <img className='bgImg' src={require('../../assets/imgs/entry/entry5.png')} alt="bgImg" />
+                    <img className='bgImg' src={require('../../assets/imgs/entry/entry3.png')} alt="bgImg" />
                
             </BGImg>
             <Content>

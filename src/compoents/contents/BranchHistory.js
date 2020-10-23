@@ -77,12 +77,13 @@ align-items:center;
 }
 `
 const ProgressTag = styled.div`
-position:relative;
+position:absolute;
 display:flex;
 width:100%;
 justify-content:center;
 align-items:center;
 margin-bottom:5px;
+z-index:100;
 .imgpro{
     margin:3px;
 }
@@ -170,7 +171,7 @@ display:flex;
 flex-direction:column;
 .bgImg{
     width:100%;
-    height:100%;
+    // height:100%;
     position:relative;
     z-order:0;
 }
