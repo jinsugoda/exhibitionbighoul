@@ -19,20 +19,23 @@ const Header = styled.div`
 position:relative;
 display:flex;
 flex:5;
+margin: 0 auto;
 justify-content:center;
 align-items:flex-start;
-
+width:375px;
 .bgImg{
+  
+
     // width:100%;
-    ${media.desktopL`
-    width: 33%;
-    `}
-    ${media.mobilePhone`
-    width:92%;
-    `}
-    ${media.tablet`
-    width: 60%;
-    `}
+    // ${media.desktopL`
+    // width: 33%;
+    // `}
+    // ${media.mobilePhone`
+    // width:92%;
+    // `}
+    // ${media.tablet`
+    // width: 60%;
+    // `}
     height:100%;
     position:absolute;
     
@@ -120,9 +123,9 @@ export default function Conclusion({history}){
     return(
         <Wrapper>
             <Header>
-              <div>
+              {/* <div> */}
                 <img className='bgImg' src={require('../../assets/imgs/entry/modern_bg.png')} alt="bgImg" />
-              </div>
+              {/* </div> */}
                 
                 <HeaderItemWrapper>
                 <HeaderTitleW >
