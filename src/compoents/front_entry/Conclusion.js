@@ -22,11 +22,11 @@ flex:5;
 margin: 0 auto;
 justify-content:center;
 align-items:flex-start;
-
+width:85%
 .bgImg{
   
     
-    width:83%;
+    width:100%;
     // ${media.desktopL`
     // width: 33%;
     // `}
