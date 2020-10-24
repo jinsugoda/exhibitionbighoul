@@ -52,7 +52,7 @@ background:${oc.blue[6]};
      color:white;
      margin-top:5px;
      font-family:Cafe24Dangdanghae;
-     line-height:1.5;
+     line-height:1.3;
  }
  .hbottom{
     font-size:20px;
@@ -180,6 +180,7 @@ const DateWordWrapper = styled.div`
 position:relative;
 display:flex;
 justify-content:space-between;
+margin-bottom:5px;
 .exp{
     font-size:9px;
     color:white;
@@ -207,7 +208,7 @@ flex-direction:column;
     color:white;
     margin-bottom:0px;
     font-weight:bold;
-    line-height:1.5;
+    line-height:1.3;
     letter-spacing:1px;
     font-family:Cafe24Dangdanghae;
 }

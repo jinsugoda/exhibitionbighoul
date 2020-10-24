@@ -19,12 +19,12 @@ display:flex;
 width:100%;
 height:100%;
 flex-direction:column;
-
+overflow:auto;
 `
 const Header = styled.div`
 position:relative;
 display:flex;
-flex:5;
+flex:1;
 margin: 0 auto;
 justify-content:center;
 align-items:flex-start;
@@ -75,6 +75,13 @@ margin-left:20px;
 color:white;
 
 `
+const ContainerTitleFooter = styled.div`
+position:relative;
+display:flex;
+flex-direction:column;
+
+`
+
 const MainTitle = styled.div`
 position:absolute;
 display:flex;
@@ -83,7 +90,7 @@ align-items:center;
 margin: 0 auto;
 border-radius:16px;
 border:1px solid ${oc.gray[1]};
-height:87%;
+height:86%;
 width:80%;
 background:white;
 z-index:100;
@@ -155,9 +162,11 @@ margin-right:15px;
 const FooterWrapper = styled.div`
 position:relative;
 display:flex;
-flex:1;
+// flex:1;
 justify-content:center;
 align-items:center;
+margin-top:10px;
+margin-bottom:20px;
 .footerImg{
 
   display:flex;
@@ -206,6 +215,9 @@ export default function Conclusion({history}){
                     </HeaderArmBlack>
                 </HeaderTitleW> 
                 </HeaderItemWrapper>
+                <ContainerTitleFooter>
+                  
+                </ContainerTitleFooter>
             </Header>
             <FooterWrapper>
             <div className='footerImg'>
