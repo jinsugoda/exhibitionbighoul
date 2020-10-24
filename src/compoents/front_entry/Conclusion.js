@@ -81,29 +81,20 @@ display:flex;
 flex-direction:column;
 
 `
-
-const MainTitle = styled.div`
-position:absolute;
+const MainTitleFooterContainer = styled.div`
 display:flex;
 flex-direction:column;
+flex:1;
 align-items:center;
 margin: 0 auto;
 border-radius:16px;
 border:1px solid ${oc.gray[1]};
-height:86%;
-width:80%;
+// height:86%;
+width:100%;
 background:white;
 z-index:100;
-margin-top:85px;
-${media.desktopL`
-width: 33.33%;
-`}
-${media.mobilePhone`
-width:85%;
-`}
-${media.tablet`
-width: 55%;
-`}
+// margin-top:85px;
+padding-bottom:15px;
 
 .headTitle{
   font-size:24px;
@@ -135,6 +126,25 @@ width: 55%;
   // font-family:KBIZWINDOW;
   
 }
+`
+const MainTitle = styled.div`
+position:absolute;
+display:flex;
+flex-direction:column;
+height:86%;
+width:80%;
+
+z-index:100;
+margin-top:100px;
+${media.desktopL`
+width: 33.33%;
+`}
+${media.mobilePhone`
+width:85%;
+`}
+${media.tablet`
+width: 55%;
+`}
 `
 const HeaderTitleW = styled.div`
 position:relative;
@@ -196,10 +206,17 @@ export default function Conclusion({history}){
                 <img className='bgImg' src={require('../../assets/imgs/entry/modern_bg.jpg')} alt="bgImg" />
               {/* </div> */}
                 <MainTitle>
-                  <pre className="headTitle" >{headerLetter}</pre>
-                  <pre className="headCon">{michael}</pre>
-                  <pre className="headContent"> {content}</pre>
-
+                  <MainTitleFooterContainer>
+                    <pre className="headTitle" >{headerLetter}</pre>
+                    <pre className="headCon">{michael}</pre>
+                    <pre className="headContent"> {content}</pre>
+                  </MainTitleFooterContainer>
+                  
+                  <FooterWrapper>
+            <div className='footerImg'>
+                <img src={require('../../assets/imgs/footer_black.png')} style={{width:'30%',height:'50%'}} alt="footerImg"/>
+                </div>
+            </FooterWrapper>
 
 
                  
@@ -219,11 +236,7 @@ export default function Conclusion({history}){
                   
                 </ContainerTitleFooter>
             </Header>
-            <FooterWrapper>
-            <div className='footerImg'>
-                <img src={require('../../assets/imgs/footer_black.png')} style={{width:'30%',height:'50%'}} alt="footerImg"/>
-                </div>
-            </FooterWrapper>
+            
         </Wrapper>
     )
 }
