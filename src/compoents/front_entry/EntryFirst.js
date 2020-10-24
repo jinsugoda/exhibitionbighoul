@@ -21,7 +21,7 @@ flex-direction: column;
 background:${oc.blue[6]};
 .mainTitle{
     position:fixed;
-   font-size:50px;
+   font-size:48px;
    writing-mode: vertical-rl;
    color:white;
    font-weight:bold;
@@ -48,16 +48,17 @@ background:${oc.blue[6]};
  justify-content: space-between;
  align-items:flex-end;
  .htop{
-     font-size:10;
+     font-size:12px;
      color:white;
      margin-top:5px;
      font-family:Cafe24Dangdanghae;
      line-height:1.5;
  }
  .hbottom{
-    font-size:24px;
+    font-size:20px;
     color:white;
     font-weight:bold;
+    margin-top:10px;
     margin-bottom:0px;
     font-family:Cafe24Dangdanghae;
  }
@@ -79,6 +80,7 @@ margin-top:0px;
 justify-content:center;
 align-items:center;
 width:100%;
+height:100%;
 .bgImg{
     width:100%;
     height:100%;
@@ -179,7 +181,7 @@ position:relative;
 display:flex;
 justify-content:space-between;
 .exp{
-    font-size:10px;
+    font-size:9px;
     color:white;
     margin-bottom:0px;
     font-weight:bold;
@@ -192,7 +194,7 @@ position:relative;
 display:flex;
 flex-direction:column;
 .date{
-    font-size:24px;
+    font-size:22px;
     color:white;
     margin-top:10px;
     margin-bottom:0px;
@@ -201,7 +203,7 @@ flex-direction:column;
     font-family:Cafe24Dangdanghae;
 }
 .exbi{
-    font-size:20px;
+    font-size:18px;
     color:white;
     margin-bottom:0px;
     font-weight:bold;

@@ -70,7 +70,7 @@ position:relative;
 display:flex;
 justify-content:space-between;
 align-items:center;
-font-size:32;
+font-size:24px;
 margin-left:20px;
 color:white;
 
@@ -83,11 +83,11 @@ align-items:center;
 margin: 0 auto;
 border-radius:16px;
 border:1px solid ${oc.gray[1]};
-height:85%;
+height:87%;
 width:80%;
 background:white;
 z-index:100;
-margin-top:100px;
+margin-top:85px;
 ${media.desktopL`
 width: 33.33%;
 `}
@@ -99,32 +99,33 @@ width: 55%;
 `}
 
 .headTitle{
-  font-size:28px;
-  line-height:1.5;
+  font-size:24px;
+  line-height:1.4;
   letter-spacing:1px;
   text-align:center;
   color:${oc.gray[6]};
   font-weight:bold;
   margin-bottom:0px;
+  // margin-top:14px;
   font-family:RIDIBatang;
 }
 .headCon{
-  font-size:32px;
+  font-size:26px;
   line-height:1;
   
   text-align:center;
   margin-bottom:0px;
   color:${oc.gray[6]};
-  margin-top:20px;
+  margin-top:12px;
   font-family:RIDIBatang;
 }
 .headContent{
-  margin-top:20px;
+  margin-top:12px;
   font-size:15px;
-  line-height:1.5;
+  line-height:1.4;
   // letter-spacing:0px;
   text-align:center;
-  font-family:KBIZWINDOW;
+  // font-family:KBIZWINDOW;
   
 }
 `
