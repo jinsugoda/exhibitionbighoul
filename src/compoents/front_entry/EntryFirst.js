@@ -2,30 +2,88 @@ import React from 'react'
 import styled from 'styled-components'
 import oc from 'open-color'
 import {media} from '../../lib/style-utils'
+import '../../css/meyongjo.css'
 
+const headerMainTitle = "인천\n\문학기행"
+const headerRightTop = "2020\n한국근대문학관\n기획전시"
+const headerRightBottom = "인천,이야기가 되다"
+const hearderBottomRight = "국제항구, 코스모폴리탄\n\n\기회의 땅, 일자리와 일확천금\n\n\전국 최고의 휴시과 여가지\n\n\민족의 상흔, 전쟁과 분단 풍경\n\n\고도성장과 그이면\n\n\해불양수의 도시"
+const date = "2020.10.30.-"
+const exbition = "한국근대문학관\n\기획전시관"
 const Wrapper = styled.div`
 position: relative;
 display: flex;
 flex:1;
 height:100%;
 width:100%;
+
 flex-direction: column;
 background:${oc.blue[6]};
+.mainTitle{
+    position:fixed;
+   font-size:50px;
+   writing-mode: vertical-rl;
+   color:white;
+   font-weight:bold;
+   z-index:100;
+   left:20px;
+   margin-top:5px;
+   letter-spacing:3px;
+   font-family:Cafe24Dangdanghae;
+} 
 
+`
+ const HeaderTitleWrapper = styled.div`
+ position:relative;
+ display:flex;
+ flex:4;
+ justify-content:center;
+ width:100%;
+ `
+ const HeaderRightTitle = styled.div`
+ position:relative;
+ display:flex;
+ 
+ flex-direction:column;
+ justify-content: space-between;
+ align-items:flex-end;
+ .htop{
+     font-size:10;
+     color:white;
+     margin-top:5px;
+     font-family:Cafe24Dangdanghae;
+     line-height:1.5;
+ }
+ .hbottom{
+    font-size:24px;
+    color:white;
+    font-weight:bold;
+    margin-bottom:0px;
+    font-family:Cafe24Dangdanghae;
+ }
+ `
+const HeaderRight = styled.div`
+position:relative;
+display:flex;
+
+flex-direction:column;
+width:96%;
 `
 const BGImg = styled.div`
 position: relative;
 display: flex;
-flex:4;
-margin: 0 auto;
-margin-top:20px;
+flex:1;
+z-index:0;
+// margin: 0 auto;
+margin-top:0px;
 justify-content:center;
 align-items:center;
-width:83%;
+width:100%;
 .bgImg{
     width:100%;
     height:100%;
     position:absolute;
+
 }
 `
 const Content = styled.div`
@@ -116,7 +174,42 @@ margin-bottom:20px;
   
   }
 `
-
+const DateWordWrapper = styled.div`
+position:relative;
+display:flex;
+justify-content:space-between;
+.exp{
+    font-size:10px;
+    color:white;
+    margin-bottom:0px;
+    font-weight:bold;
+    letter-spacing:1px;
+    font-family:Cafe24Dangdanghae;
+}
+`
+const DateWord = styled.div`
+position:relative;
+display:flex;
+flex-direction:column;
+.date{
+    font-size:24px;
+    color:white;
+    margin-top:10px;
+    margin-bottom:0px;
+    font-weight:bold;
+    letter-spacing:1px;
+    font-family:Cafe24Dangdanghae;
+}
+.exbi{
+    font-size:20px;
+    color:white;
+    margin-bottom:0px;
+    font-weight:bold;
+    line-height:1.5;
+    letter-spacing:1px;
+    font-family:Cafe24Dangdanghae;
+}
+`
 
 function EntryFirst({history}){
     const GoVideoHandle=()=>{
@@ -127,11 +220,31 @@ function EntryFirst({history}){
     }
     return(
         <Wrapper>
-            <BGImg >
+            <pre className="mainTitle">{headerMainTitle}</pre>
+            <HeaderTitleWrapper>
+                
+                <HeaderRight>
+                <HeaderRightTitle>
+                    <pre className="htop" >{headerRightTop}</pre>
+                    <pre className="hbottom">{headerRightBottom}</pre>
+                    
+                </HeaderRightTitle>
+                <BGImg >
                
-                    <img className='bgImg' src={require('../../assets/imgs/entry/entry3.png')} alt="bgImg" />
+                    <img className='bgImg' src={require('../../assets/imgs/entry/entry_background.jpg')} alt="bgImg" />
                
-            </BGImg>
+                </BGImg>
+                <DateWordWrapper>
+                    <DateWord>
+                        <pre className='date'>{date}</pre>
+                        <pre className='exbi'>{exbition}</pre>
+                    </DateWord>
+                    <pre className='exp'>{hearderBottomRight}</pre>
+                </DateWordWrapper>
+                </HeaderRight>
+                
+            </HeaderTitleWrapper>
+            
             <Content>
                 <VideoButton onClick={GoVideoHandle}>메이킹 영상</VideoButton>
                 <ExbiButtun onClick={GoConculsion} >한국근대문학관</ExbiButtun>

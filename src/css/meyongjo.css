@@ -7,6 +7,27 @@
   src: url(../fonts/KBIZWINDOW.ttf) format("truetype");
 }
 @font-face {
-  font-family: "NotoSans";
-  src: url("../fonts/NotoSansCJKkr-Thin.otf") format("opentype");
+  font-family: "SCDream6";
+  src: url("../fonts/SCDream6.otf") format("opentype");
+}
+@font-face {
+  font-family: "RIDIBatang";
+  src: url("../fonts/RIDIBatang.otf") format("opentype");
+}
+@font-face {
+  font-family: "Cafe24Dangdanghae";
+  src: url("../fonts/Cafe24Dangdanghae.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Cafe24Danjunghae";
+  src: url("../fonts/Cafe24Danjunghae.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "GOZIK1";
+  src: url("../fonts/GOZIK1.ttf") format("truetype");
+}
+@font-face {
+  font-family: "GOZIK2";
+  src: url("../fonts/GOZIK2.ttf") format("truetype");
 }

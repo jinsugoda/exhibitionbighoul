@@ -3,10 +3,16 @@ import {useDispatch} from 'react-redux'
 import styled from 'styled-components'
 import oc from 'open-color'
 import {AiOutlineLeft} from 'react-icons/ai'
-
+import '../../css/meyongjo.css'
 import {modalShow} from '../../reducer/varient'
 import {media} from '../../lib/style-utils'
 
+
+const headerLetter = "쉽고 재미있게 즐기는\n\모두에게 열린 문학관"
+const michael = "/"
+const content = "한국근대문학관은 인천광역시와\n\인천문화재단이 힘을 합해\n\인천의 옛도신인 개항장에 있는 창고건물을\n\리모델링하여 만든공간입니다.\n\n\
+1980년대 근대계몽기로부터 1948년에\n\이르기까지 우리 근대문학의 역사를\n\상설전시를 통해 만나볼수 있습니다.\n\n\한국근대문학관은 상설전시 외에\n\문학과 인문학을 바탕으로 한 다양한\n\기획전시 및 교육프로그램과,\n\근대문학 자료의 체계적 수집,보존 등\n\
+자료 아카이빙 작업 등도 수행하고 있습니다."
 const Wrapper = styled.div`
 position: relative;
 display:flex;
@@ -22,21 +28,21 @@ flex:5;
 margin: 0 auto;
 justify-content:center;
 align-items:flex-start;
-width:90%;
+width:100%;
 .bgImg{
   
-    
+    z-index:0;
     width:100%;
-    // ${media.desktopL`
-    // width: 33%;
-    // `}
-    // ${media.mobilePhone`
-    // width:92%;
-    // `}
-    // ${media.tablet`
-    // width: 60%;
-    // `}
-    height:100%;
+    ${media.desktopL`
+    width: 33%;
+    `}
+    ${media.mobilePhone`
+    width:100%;
+    `}
+    ${media.tablet`
+    width: 60%;
+    `}
+    height:50%;
     position:absolute;
     
 }
@@ -68,6 +74,59 @@ font-size:32;
 margin-left:20px;
 color:white;
 
+`
+const MainTitle = styled.div`
+position:absolute;
+display:flex;
+flex-direction:column;
+align-items:center;
+margin: 0 auto;
+border-radius:16px;
+border:1px solid ${oc.gray[1]};
+height:85%;
+width:80%;
+background:white;
+z-index:100;
+margin-top:100px;
+${media.desktopL`
+width: 33.33%;
+`}
+${media.mobilePhone`
+width:85%;
+`}
+${media.tablet`
+width: 55%;
+`}
+
+.headTitle{
+  font-size:28px;
+  line-height:1.5;
+  letter-spacing:1px;
+  text-align:center;
+  color:${oc.gray[6]};
+  font-weight:bold;
+  margin-bottom:0px;
+  font-family:RIDIBatang;
+}
+.headCon{
+  font-size:32px;
+  line-height:1;
+  
+  text-align:center;
+  margin-bottom:0px;
+  color:${oc.gray[6]};
+  margin-top:20px;
+  font-family:RIDIBatang;
+}
+.headContent{
+  margin-top:20px;
+  font-size:15px;
+  line-height:1.5;
+  // letter-spacing:0px;
+  text-align:center;
+  font-family:KBIZWINDOW;
+  
+}
 `
 const HeaderTitleW = styled.div`
 position:relative;
@@ -124,9 +183,17 @@ export default function Conclusion({history}){
         <Wrapper>
             <Header>
               {/* <div> */}
-                <img className='bgImg' src={require('../../assets/imgs/entry/modern_bg.png')} alt="bgImg" />
+                <img className='bgImg' src={require('../../assets/imgs/entry/modern_bg.jpg')} alt="bgImg" />
               {/* </div> */}
-                
+                <MainTitle>
+                  <pre className="headTitle" >{headerLetter}</pre>
+                  <pre className="headCon">{michael}</pre>
+                  <pre className="headContent"> {content}</pre>
+
+
+
+                 
+                </MainTitle>
                 <HeaderItemWrapper>
                 <HeaderTitleW >
                     <AiOutlineLeft onClick={()=>history.go(-1)} />
