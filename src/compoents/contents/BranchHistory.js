@@ -17,7 +17,7 @@ const HeaderWrapper = styled.div`
 position: relative;
 display: flex;
 flex: 3;
-
+z-index:100;
 `
 const Header = styled.div`
 position: fixed;
@@ -77,13 +77,14 @@ align-items:center;
 }
 `
 const ProgressTag = styled.div`
-position:absolute;
+position:relative;
 display:flex;
 width:100%;
 justify-content:center;
 align-items:center;
 margin-bottom:5px;
 z-index:100;
+background:${oc.gray[0]};
 .imgpro{
     margin:3px;
 }
@@ -96,6 +97,7 @@ flex-direction:column;
 justify-content:flex-start;
 align-items:center;
 overflow:auto;
+z-index:0;
 .contents{
     position:relative;
     color: ${oc.gray[8]};   
@@ -106,6 +108,7 @@ overflow:auto;
     line-height: 2;
     white-space: pre-line;
     font-size:20px;
+    margin-bottom:0px;
     ${media.desktopL`
     width: 33%;
     `}
@@ -163,17 +166,18 @@ const HeaderItemWrapper = styled.div`
   display:flex;
   justify-content:space-between;
   width:100%;
-
+  z-index:200;
 `
 const HeaderBackgroudWrapper = styled.div`
 position:absolute;
 display:flex;
 flex-direction:column;
+z-index:100;
 .bgImg{
     width:100%;
     // height:100%;
     position:relative;
-    z-order:0;
+    
 }
 `
 
