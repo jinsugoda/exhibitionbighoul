@@ -187,7 +187,7 @@ margin-bottom:5px;
     margin-bottom:0px;
     font-weight:bold;
     letter-spacing:1px;
-    font-family:Cafe24Dangdanghae;
+    // font-family:Cafe24Dangdanghae;
 }
 `
 const DateWord = styled.div`
