@@ -92,7 +92,7 @@ border:1px solid ${oc.gray[1]};
 // height:86%;
 width:100%;
 background:white;
-z-index:100;
+
 // margin-top:85px;
 padding-bottom:20px;
 
@@ -134,7 +134,7 @@ flex-direction:column;
 height:88%;
 width:80%;
 
-z-index:100;
+// z-index:2;
 margin-top:100px;
 ${media.desktopL`
 width: 33.33%;
@@ -213,7 +213,8 @@ export default function Conclusion({history}){
                   </MainTitleFooterContainer>
                   
                   <FooterWrapper>
-            <div className='footerImg'>
+                
+                 <div className='footerImg'>
                 <img src={require('../../assets/imgs/footer_black.png')} style={{width:'30%',height:'50%'}} alt="footerImg"/>
                 </div>
             </FooterWrapper>

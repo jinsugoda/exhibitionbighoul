@@ -15,7 +15,8 @@ const customStyles = {
       marginRight           : '-50%',
       transform             : 'translate(-50%, -50%)',
       width:'300px',
-      height: '150px'
+      height: '150px',
+      
     }
   };
   Modal.setAppElement('#root')
@@ -27,7 +28,7 @@ const customStyles = {
   width:100%;
   height:100%;
   flex-direction:column;
-  
+  z-index:1000;  
   `
   const Header = styled.div`
   position:relative;
