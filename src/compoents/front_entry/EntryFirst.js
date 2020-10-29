@@ -7,7 +7,7 @@ import '../../css/meyongjo.css'
 const headerMainTitle = "인천\n\문학기행"
 const headerRightTop = "2020\n한국근대문학관\n기획전시"
 const headerRightBottom = "인천,이야기가 되다"
-const hearderBottomRight = "국제항구, 코스모폴리탄\n\n\기회의 땅, 일자리와 일확천금\n\n\전국 최고의 휴시과 여가지\n\n\민족의 상흔, 전쟁과 분단 풍경\n\n\고도성장과 그이면\n\n\해불양수의 도시"
+const hearderBottomRight = "국제항구, 코스모폴리탄\n\n\기회의 땅, 일자리와 일확천금\n\n\전국 최고의 휴식과 여가지\n\n\민족의 상흔, 전쟁과 분단 풍경\n\n\고도성장과 그이면\n\n\해불양수의 도시"
 const date = "2020.10.30.-"
 const exbition = "한국근대문학관\n\기획전시관"
 const Wrapper = styled.div`
@@ -186,7 +186,7 @@ margin-bottom:5px;
     color:white;
     margin-bottom:0px;
     font-weight:bold;
-    letter-spacing:1px;
+    letter-spacing:1px;    
     line-height:1;
     // font-family:Cafe24Dangdanghae;
 }
