@@ -187,6 +187,7 @@ margin-bottom:5px;
     margin-bottom:0px;
     font-weight:bold;
     letter-spacing:1px;
+    line-height:1;
     // font-family:Cafe24Dangdanghae;
 }
 `
